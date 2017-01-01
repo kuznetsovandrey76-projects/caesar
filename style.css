@@ -1,0 +1,19 @@
+#main {
+	text-align: center;
+}
+#input {
+	width: 250px;
+}
+
+#output {
+	padding: 10px;
+	height: 50px;
+	margin: 10px auto;
+	width: 50%;
+	border: 1px solid;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+}
+#number {
+	width: 2em;
+}
