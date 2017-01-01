@@ -11,7 +11,7 @@
 		// number - на сколько символов вправо необходимо передвинуть букву 
 		var number = document.getElementById('number');
 		number = parseInt(number.value); // 32 == 0
-		if (isNaN(number)) {
+		if (isNaN(number) || number > 32) {
 			number = 0;
 		}
 		
