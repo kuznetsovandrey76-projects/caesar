@@ -1,9 +1,11 @@
 (function () {	
 
-	var input = document.getElementById('input');
-	var rot = document.getElementById('rot');
+	var input = document.getElementById('input'),
+		output = document.getElementById('output'),
+		msg = document.getElementById('message');
 
-	rot.addEventListener("click", function(){
+	// После нажатия на клавиатуры строка в выводе обновляется
+	input.addEventListener('keyup', function() {
 
 		var arr = [];
 		var result = [];
@@ -13,6 +15,9 @@
 		number = parseInt(number.value); // 32 == 0
 		if (isNaN(number) || number > 32) {
 			number = 0;
+			msg.innerHTML = 'чтобы изменить строку введите <span>число</span> от 1 до 31';
+		} else {
+			msg.innerHTML = '';
 		}
 		
 		// string - строка которую необходимо преобразовать
@@ -59,13 +64,15 @@
 			// отправляем каждую букв в итоговый массив
 			result.push(letter);
 		}
-		
+		result = result.join('');
 		// смотрим какие есть charCode в нашей строке
 		// return arr.join(' ');
 		
 		// выводим результат без пробелов
-		// return result.join('');
+		// return result.join('');		
 
-		document.getElementById('output').innerHTML = 'ROT' + number + ': ' + result.join('');
+		output.innerHTML = 'ROT' + number + ': ' + result;
 	});
 })()
+
+

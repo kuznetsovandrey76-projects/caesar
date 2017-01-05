@@ -1,12 +1,17 @@
-#main {
+body {
 	text-align: center;
 }
 #input {
 	width: 250px;
+	margin-top: 1em;
 }
-
+#number {
+	width: 2em;
+	text-align: center;
+}
 #output {
 	padding: 10px;
+    text-align: left;
 	height: 50px;
 	margin: 10px auto;
 	width: 50%;
@@ -14,6 +19,6 @@
 	-webkit-border-radius: 10px;
 	        border-radius: 10px;
 }
-#number {
-	width: 2em;
+span {
+	color: red;
 }
