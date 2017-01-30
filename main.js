@@ -73,6 +73,31 @@
 
 		output.innerHTML = 'ROT' + number + ': ' + result;
 	});
+
+
+
+
+	// 2 часть, просмотр возможных шрифтов
+	var fonts = ['Raleway', 'Muli', 'Dosis', 'Poppins', 'Oxygen', 'Josefin Sans', 'Maven Pro', 'Exo', 'Nobile', 'Antic', 'Ruluko'];
+
+	for (var i = 0; i < fonts.length; i++) {
+		other_fonts.innerHTML += '<p></p>';
+	} 
+	var out = document.querySelectorAll('p');
+	
+	input.addEventListener('keyup', addOut);
+
+	function addOut() {
+		for (var i = 0; i < fonts.length; i++) { 
+			out[i].style.fontFamily = fonts[i];
+			out[i].innerHTML = i + '. ' + fonts[i] + ': ' + input.value;
+		}
+	}
+
+
+
+
+
 })()
 
 
